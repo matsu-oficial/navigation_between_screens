@@ -14,33 +14,34 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.navigation.NavHostController
+import androidx.navigation.NavController
 
 @Composable
-fun LoginScreen(modifier: Modifier = Modifier, navController: NavHostController) {
+fun PedidosScreen(modifier: Modifier, navController: NavController) {
     Box(
-        modifier = modifier
+        modifier
             .fillMaxSize()
-            .background(Color(0xFF171717))
+            .background(Color(0xFFC9C9C9))
             .padding(32.dp)
     ) {
         Text(
-            text = "LOGIN",
+            text = "PEDIDOS",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
             color = Color(0xFFEE3000)
         )
         Button(
             onClick = {navController.navigate("menu")},
-            colors = ButtonDefaults.buttonColors(Color.White),
-            modifier = Modifier.align(Alignment.Center)
+            colors = ButtonDefaults.buttonColors(Color(0xFF171717)),
+            modifier = Modifier.align(
+                Alignment.Center
+            )
         ) {
             Text(
-                text = "ENTRAR",
+                text = "VOLTAR",
                 fontSize = 20.sp,
                 color = Color(0xFFEE3000)
             )
         }
     }
 }
-

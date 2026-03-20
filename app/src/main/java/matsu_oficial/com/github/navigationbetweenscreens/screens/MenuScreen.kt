@@ -19,20 +19,21 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
 
 @Composable
-fun MenuScreen(modifier: Modifier = Modifier) {
+fun MenuScreen(modifier: Modifier, navController: NavHostController) {
     Box(
         modifier = modifier
             .fillMaxSize()
-            .background(Color(0xFF2C4EC7))
+            .background(Color(0xFF171717))
             .padding(32.dp)
     ) {
         Text(
             text = "MENU",
             fontSize = 24.sp,
             fontWeight = FontWeight.Bold,
-            color = Color.White
+            color = Color(0xFFEE3000)
         )
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -41,38 +42,38 @@ fun MenuScreen(modifier: Modifier = Modifier) {
                 .align(Alignment.Center)
         ) {
             Button(
-                onClick = { /*TODO*/ },
+                onClick = {navController.navigate("perfil")},
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
                 Text(
                     text = "Perfil",
                     fontSize = 20.sp,
-                    color = Color.Blue
+                    color = Color(0xFFEE3000)
                 )
             }
             Spacer(modifier = Modifier.height(16.dp))
             Button(
-                onClick = { /*TODO*/ },
+                onClick = {navController.navigate("pedidos")},
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
                 Text(
                     text = "Pedidos",
                     fontSize = 20.sp,
-                    color = Color.Blue
+                    color = Color(0xFFEE3000)
                 )
             }
             Spacer(modifier = Modifier.height(16.dp))
             Button(
-                onClick = { /*TODO*/ },
+                onClick = {navController.navigate("login")},
                 colors = ButtonDefaults.buttonColors(Color.White),
                 modifier = Modifier.size(width = 200.dp, height = 48.dp)
             ) {
                 Text(
                     text = "Sair",
                     fontSize = 20.sp,
-                    color = Color.Blue
+                    color = Color(0xFFEE3000)
                 )
             }
         }
