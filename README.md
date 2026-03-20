@@ -2,8 +2,8 @@
 
 Projeto sobre navegação entre telas proposto pelo professor Ewerton Luiz utilizando o Navigation Compose no Kotlin. 
 
-Nome: Matheus Richard Hadermeck
-Turma: 3SIR
+#### Nome: Matheus Richard Hadermeck
+#### Turma: 3SIR
 
 ## Screenshots
 
